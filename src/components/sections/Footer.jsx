@@ -24,7 +24,7 @@ const Footer = () => {
           {["Home", "About Us", "Services", "Clients", "Contact", "Privacy Policy"].map((link, idx) => (
             <a 
               key={idx}
-              href="#"
+              href={`#${link}`}
               className="hover:text-yellow-400 transition-colors duration-300 hover:underline"
             >
               {link}

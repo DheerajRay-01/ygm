@@ -48,5 +48,15 @@ export const workSectorsDemo = [
     title: "Information Technology",
     description: "Highly skilled IT professionals for software development, network administration, cybersecurity, and technical support.",
     image: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg"
+  },
+  {
+    title: "Banking & Finance",
+    description: "Professional manpower for banking, financial services, and insurance sectors, ensuring reliable support for operations and customer service.",
+    image: "https://images.pexels.com/photos/4968635/pexels-photo-4968635.jpeg"
+  },
+  {
+    title: "Aviation & Transport",
+    description: "Qualified staff for airports, airlines, and transportation services, supporting logistics, operations, and passenger assistance.",
+    image: "https://images.pexels.com/photos/7232401/pexels-photo-7232401.jpeg"
   }
 ];

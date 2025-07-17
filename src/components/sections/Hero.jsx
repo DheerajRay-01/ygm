@@ -67,7 +67,7 @@ tl2.from(titleRef.current, {
   }, []);
 
   return (
-<div className="w-screen h-screen bg-gradient-to-r from-gray-50 to-gray-100">
+<div id='hero' className="w-screen h-screen bg-gradient-to-r from-gray-50 to-gray-100">
   <div
     className="relative flex flex-col justify-center items-center w-full h-full gap-6 px-6 bg-center bg-cover"
     style={{

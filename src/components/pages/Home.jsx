@@ -1,20 +1,20 @@
 import React from 'react'
 import Hero from '../sections/Hero'
 import Strengths from '../sections/Strengths'
-import WorkSectors from '../sections/WorkSectors'
 import Slider from '../sections/Slider'
 import Clients from '../sections/Clients'
-import ContactUs from '../sections/ContactUs'
+import Contact from '../sections/Contact'
+import Services from '../sections/Services'
 
 const Home = () => {
   return (
     <div>
         <Hero/>
         <Slider/>
-        <WorkSectors/>
+        <Services/> 
         <Clients/>
         <Strengths/>
-        <ContactUs/>
+        <Contact/>
     </div>
   )
 }
