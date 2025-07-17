@@ -51,6 +51,7 @@ const Slide1 = () => {
         muted
         playsInline
       >
+        {/* <source src="/video1.mp4" type="video/mp4" /> */}
         <source src="/video1.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
