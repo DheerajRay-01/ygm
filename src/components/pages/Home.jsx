@@ -15,8 +15,8 @@ const Home = () => {
         <Hero />
       </section>
       <section id="about" className="scroll-mt-20">
-        <Slider />
-        {/* <Slider3/> */}
+        {/* <Slider /> */}
+        <Slider3/>
       </section>
       <section id="service" className="pt-7 scroll-mt-20">
         <Services />
