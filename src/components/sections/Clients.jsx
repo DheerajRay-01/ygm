@@ -62,7 +62,7 @@ gsap.from(titleSplit.words, {
     <div
       className="client-container w-screen py-10 bg-gray-50 overflow-hidden"
     >
-      <h1 className="client-title text-5xl font-extrabold text-center text-gray-900 mb-10">
+      <h1 className="client-title text-4xl md:text-5xl font-extrabold text-center text-gray-900 mb-10">
         Our Trusted Clients
       </h1>
 

@@ -38,7 +38,7 @@ const ServiceCard = ({ data }) => {
   return (
     <div
       ref={containerRef}
-      className="relative group rounded-lg overflow-hidden shadow-lg aspect-square bg-cover bg-center cursor-pointer transition-transform duration-300 hover:scale-105"
+      className=".service-card relative group rounded-lg overflow-hidden shadow-lg aspect-square bg-cover bg-center cursor-pointer transition-transform duration-300 hover:scale-105"
       style={{ backgroundImage: `url(${data.image})` }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}

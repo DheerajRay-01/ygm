@@ -32,7 +32,7 @@ const contactInfo =[
   ]
 
   return (
-        <div className="p-1 md:p-6 contact-container relative  ">
+        <div className="p-1 md:p-6 contact-container relative  mt-5">
           <div className="relative w-full ">
     
     
