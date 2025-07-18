@@ -60,20 +60,20 @@ const Slide1 = () => {
       <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8 p-8 lg:p-24 h-full">
+      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8 p-8 lg:p-24 mt-20 md:m-3 h-full">
         {/* Media Section */}
-        <div className="flex-1 max-w-lg lg:max-w-xl">
+        <div className="flex-0 md:flex-1 max-w-lg lg:max-w-xl">
           <img
             ref={imgRef}
             src="https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg"
             alt="Who We Are"
-            className="w-full rounded-3xl shadow-2xl border-4 border-amber-400"
+            className="w-full rounded-3xl shadow-2xl border-4  border-amber-400"
           />
-        </div>
+        </div>  
 
         {/* Text Section */}
         <div ref={textRef} className="flex-1 text-center lg:text-left text-white space-y-6">
-          <h2 className="text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight drop-shadow-lg">
+          <h2 className="text-4xl lg:text-7xl font-extrabold tracking-tight leading-tight drop-shadow-lg">
             Who We Are
             <span className="block w-[80%] h-1 bg-amber-500 mt-3 mx-auto lg:mx-0 rounded-full"></span>
           </h2>

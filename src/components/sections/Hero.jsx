@@ -75,7 +75,7 @@ tl2.from(titleRef.current, {
     }}
   >
     {/* Overlay */}
-    <div className="absolute inset-0 bg-black/40 z-0"></div>
+    <div className="absolute inset-0 bg-black/50 backdrop-blur-[1px] z-0"></div>
 
     {/* Hero Content */}
     <div className="relative z-10 flex flex-col justify-center items-center gap-8 text-center">
@@ -84,8 +84,8 @@ tl2.from(titleRef.current, {
         ref={titleRef}
         className="flex flex-col justify-center items-center"
       >
-        <img src="/ygm_logo.png" alt="Logo" className="w-60" />
-        <p className="text-2xl lg:text-3xl text-white font-semibold tracking-wide">
+        <img src="/ygm_logo.png" alt="Logo" className="w-60 " />
+        <p className="text-4xl font-extrabold text-white tracking-wide">
           Yash Govind Marketing Pvt. Ltd.
         </p>
       </div>
@@ -93,7 +93,7 @@ tl2.from(titleRef.current, {
       {/* Tagline */}
       <p
         ref={taglineRef}
-        className="text-lg lg:text-2xl text-gray-200 max-w-3xl leading-relaxed  font-semibold tracking-wide"
+        className="text-lg lg:text-2xl italic text-gray-200 max-w-3xl leading-relaxed  font-semibold tracking-wide"
       >
         Trusted manpower solutions delivering certified excellence, reliable
         teams, and nationwide impact.
@@ -110,7 +110,7 @@ tl2.from(titleRef.current, {
   </h3>
 
   {/* Scrolling Text */}
-  <div className="relative h-10 lg:h-12 overflow-hidden min-w-[16rem] lg:min-w-[20rem]">
+  <div className="relative h-10 lg:h-12 overflow-hidden min-w-[16rem] lg:min-w-[20rem] flex justify-center items-center">
     <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-transparent to-transparent"></div>
 
     <div
@@ -134,7 +134,7 @@ tl2.from(titleRef.current, {
         .map((item, ind) => (
           <p
             key={ind}
-            className="text-blue-700 font-bold text-base lg:text-xl px-2 py-1 tracking-wide"
+            className="text-amber-600 font-bold text-base lg:text-xl px-2 py-1 tracking-wide"
           >
             {item}
           </p>

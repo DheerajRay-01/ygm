@@ -19,14 +19,14 @@ const Slide3 = () => {
         <div className="absolute inset-0 bg-black/50 backdrop-blur-[1px]"></div>
 
         {/* Content */}
-        <div className="relative z-10 flex flex-col items-center justify-center text-center h-full p-8 space-y-8">
+        <div className="relative z-10 flex flex-col items-center justify-center text-center h-full p-8 space-y-8 ">
           {/* Heading */}
-          <h2 className="text-6xl lg:text-8xl font-extrabold text-white drop-shadow-2xl leading-tight">
-            Powering Progress. Building Futures.
+          <h2 className="text-3xl lg:text-8xl font-extrabold text-white drop-shadow-2xl leading-tight">
+            Powering Progress.<br/> Building Futures.
           </h2>
 
           {/* Quick Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 bg-white/10 backdrop-blur-sm rounded-xl px-6 py-4">
+          <div className="w-[95vw] sm:w-fit  grid grid-cols-4 gap-4 bg-white/10 backdrop-blur-sm  rounded-xl px-2 md:px-6 py-4 ">
             {[
               { label: "700+ Employees", icon: "👥" },
               { label: "50+ Happy Clients", icon: "🤝" },
@@ -37,7 +37,7 @@ const Slide3 = () => {
                 key={index}
                 className="flex flex-col items-center justify-center p-2 text-white border-r border-white/20 last:border-none"
               >
-                <p className="text-lg font-semibold">{item.label}</p>
+                <p className="text-sm md:text-lg font-semibold">{item.label}</p>
               </div>
             ))}
           </div>

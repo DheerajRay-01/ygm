@@ -32,11 +32,11 @@ const contactInfo =[
   ]
 
   return (
-        <div className="p-6 lg:p-12 contact-container relative">
-          <div className="relative z-10">
+        <div className="p-1 md:p-6 contact-container relative  ">
+          <div className="relative w-full ">
     
     
-            <div className="flex flex-col lg:flex-row gap-10 rounded-xl p-8 lg:p-16 backdrop-blur-[3px] items-start">
+            <div className="flex flex-col  lg:flex-row gap-10 rounded-xl p-4 lg:p-16 backdrop-blur-[3px] items-start">
               {/* Right Side - Contact Details */}
               <div ref={ContactRightRef} className="flex-1 flex flex-col justify-center  ">
                         <h1 className="contact-title text-4xl lg:text-6xl font-extrabold  mb-10 drop-shadow-lg">
@@ -80,7 +80,7 @@ const contactInfo =[
               {/* Left Side - Form */}
               <form
                 ref={ContactLeftRef}
-                className="flex-1 p-8 rounded-3xl border-2 border-amber-600 space-y-6 text-gray-800"
+                className="flex-1 px-2 md:px-8 py-8  rounded-3xl border-3 border-amber-600 space-y-6 text-gray-800"
               >
                 <h3 className="text-2xl font-semibold mb-2">Request a Callback</h3>
                 <p className="text-gray-600 text-sm">

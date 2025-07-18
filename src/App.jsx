@@ -4,6 +4,9 @@ import Layout from './components/pages/Layout'
 import Home from './components/pages/Home'
 const App = () => {
 
+
+
+
   return (
     <Routes>
       <Route element={<Layout/>}>
