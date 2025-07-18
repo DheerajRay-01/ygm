@@ -46,14 +46,14 @@ const Strengths = () => {
   }, []);
 
   return (
-    <div className="strength-section px-4  py-12 min-h-screen flex flex-col items-center">
-      <h1 className="strength-title text-4xl md:text-5xl font-extrabold text-center text-gray-800  drop-shadow-sm">
+    <div className="strength-section px-4 py-12 min-h-screen flex flex-col items-center "> {/* section bg updated */}
+      <h1 className="strength-title text-4xl md:text-5xl font-extrabold text-center text-[#FFD700] drop-shadow-sm"> {/* title color updated */}
         Trusted by Standards
       </h1>
 
       <div
         ref={gridRef}
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl w-full"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl w-full mt-10"
       >
         {strengths.map((item, index) => (
           <LisenceCard item={item} key={index} />

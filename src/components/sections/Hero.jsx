@@ -66,26 +66,42 @@ tl2.from(titleRef.current, {
 
   }, []);
 
+
+  const scrollOptions = [
+              "700+ Skilled Professionals",
+              "ISO 9001 Certification",
+              "Reliable Human Capital",
+              "Workforce Excellence",
+              "Nationwide Presence",
+            ]
+              .concat([
+                "700+ Skilled Professionals",
+                "ISO 9001 Certification",
+                "Reliable Human Capital",
+                "Workforce Excellence",
+                "Nationwide Presence",
+              ])
+
   return (
-<div id='hero' className="w-screen h-screen bg-gradient-to-r from-gray-50 to-gray-100">
+<div id='hero' className="w-screen h-screen bg-gradient-to-r from-[#000000] to-[#1A1A1A]">
   <div
-    className="relative flex flex-col justify-center items-center w-full h-full gap-6 px-6 bg-center bg-cover"
+    className=" relative flex flex-col justify-center items-center w-full h-full gap-6 px-6 bg-center bg-cover"
     style={{
       backgroundImage: `url(https://images.pexels.com/photos/1181438/pexels-photo-1181438.jpeg)`,
     }}
   >
     {/* Overlay */}
-    <div className="absolute inset-0 bg-black/50 backdrop-blur-[1px] "></div>
+    <div className=" absolute inset-0 bg-[#000000]/60 backdrop-blur-[1px]"></div> {/* color updated */}
 
     {/* Hero Content */}
-    <div className="relative flex flex-col justify-center items-center gap-8 text-center">
+    <div className=" relative pt-10 md:p-20 flex flex-col justify-center items-center gap-2 md:gap-3 text-center">
       {/* Logo / Company Name */}
       <div
         ref={titleRef}
-        className="flex flex-col justify-center items-center"
+        className="flex flex-col justify-center items-center  mt-20"
       >
-        <img src="/ygm_logo.png" alt="Logo" className="w-60 " />
-        <p className="text-4xl font-extrabold text-white tracking-wide">
+        <img src="/logo.png" alt="Logo" className="w-25 md:w-50 " />
+        <p className="text-3xl md:text-4xl font-extrabold text-[#FFD700] tracking-wide"> {/* color updated */}
           Yash Govind Marketing Pvt. Ltd.
         </p>
       </div>
@@ -93,75 +109,57 @@ tl2.from(titleRef.current, {
       {/* Tagline */}
       <p
         ref={taglineRef}
-        className="text-lg lg:text-2xl italic text-gray-200 max-w-3xl leading-relaxed  font-semibold tracking-wide"
-      >
+        className="text-lg lg:text-2xl italic text-[#E0E0E0] max-w-3xl leading-relaxed font-semibold tracking-wide"> {/* color updated */}
         Trusted manpower solutions delivering certified excellence, reliable
         teams, and nationwide impact.
       </p>
 
       {/* Scrolling Text */}
-  <div
-  ref={scrollContainerRef}
-  className="flex flex-col lg:flex-row items-center justify-center gap-2 bg-white/20 rounded-xl backdrop-blur-md shadow-lg px-4 py-2"
->
-  {/* Static Heading */}
-  <h3 className="text-base lg:text-xl font-semibold text-gray-100 tracking-wide">
-    We Build Success Through
-  </h3>
+      <div
+        ref={scrollContainerRef}
+        className="flex flex-col lg:flex-row items-center justify-center gap-2 bg-[#1A1A1A]/70 rounded-xl backdrop-blur-md shadow-lg px-4 py-2"> {/* color updated */}
+        {/* Static Heading */}
+        <h3 className="text-base lg:text-xl font-semibold text-[#FFD700] tracking-wide"> {/* color updated */}
+          We Build Success Through
+        </h3>
 
-  {/* Scrolling Text */}
-  <div className="relative h-10 lg:h-12 overflow-hidden min-w-[16rem] lg:min-w-[20rem] flex justify-center items-center">
-    <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-transparent to-transparent"></div>
+        {/* Scrolling Text */}
+        <div className="relative h-10 lg:h-12 overflow-hidden min-w-[16rem] lg:min-w-[20rem] flex justify-center items-center">
+          <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-transparent to-transparent"></div>
 
-    <div
-      ref={scrollRef}
-      className="absolute top-0 space-y-2 flex flex-col"
-    >
-      {[
-        "700+ Skilled Professionals",
-        "ISO 9001 Certification",
-        "Reliable Human Capital",
-        "Workforce Excellence",
-        "Nationwide Presence",
-      ]
-        .concat([
-          "700+ Skilled Professionals",
-          "ISO 9001 Certification",
-          "Reliable Human Capital",
-          "Workforce Excellence",
-          "Nationwide Presence",
-        ])
-        .map((item, ind) => (
-          <p
-            key={ind}
-            className="text-amber-600 font-bold text-base lg:text-xl px-2 py-1 tracking-wide"
+          <div
+            ref={scrollRef}
+            className="absolute top-0 space-y-2 flex flex-col"
           >
-            {item}
-          </p>
-        ))}
-    </div>
-  </div>
-</div>
-
+            {
+              scrollOptions.map((item, ind) => (
+                <p
+                  key={ind}
+                  className="text-[#FFD700] font-bold text-base lg:text-xl px-2 py-1 tracking-wide"> {/* color updated */}
+                  {item}
+                </p>
+              ))}
+          </div>
+        </div>
+      </div>
 
       {/* CTA Buttons */}
       <div ref={ctaRef} className="flex gap-4 mt-6 flex-wrap justify-center">
         <a
           href="#contact"
-          className="px-6 py-3 bg-blue-600 text-white text-lg lg:text-xl rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg transition-transform hover:scale-105 font-semibold tracking-wide"
-        >
+          className="px-6 py-3 bg-[#FFD700] text-[#000000] text-lg lg:text-xl rounded-full shadow-md hover:bg-[#C5A017] hover:shadow-lg transition-transform hover:scale-105 font-semibold tracking-wide"> {/* color updated */}
           Get Started
         </a>
         <a
           href="#services"
-          className="px-6 py-3 border border-blue-300 text-blue-100 text-lg lg:text-xl rounded-full shadow-md hover:bg-blue-50 hover:text-blue-700 hover:border-blue-700 transition-transform hover:scale-105 font-semibold tracking-wide"
-        >
+          className="px-6 py-3 border border-[#FFD700] text-[#FFD700] text-lg lg:text-xl rounded-full shadow-md hover:bg-[#FFD700] hover:text-[#000000] hover:border-[#FFD700] transition-transform hover:scale-105 font-semibold tracking-wide"> {/* color updated */}
           View Services
         </a>
       </div>
     </div>
   </div>
 </div>
+
 
 
   );

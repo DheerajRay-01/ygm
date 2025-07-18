@@ -49,10 +49,10 @@ const Services = () => {
   }, []);
 
   return (
-    <div id="service" className="service-container w-full min-h-screen bg-gray-50 py-10">
+    <div id="service" className="service-container w-full min-h-screen py-10">
       <h1
         ref={titleRef}
-        className="text-4xl md:text-5xl font-extrabold text-center text-gray-900 mb-10"
+        className="text-4xl md:text-5xl font-extrabold text-center text-[#FFD700] mb-10"
       >
         Industries We Serve
       </h1>

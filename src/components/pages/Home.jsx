@@ -10,14 +10,13 @@ import Slider3 from '../sections/Slider3'
 
 const Home = () => {
   return (
-    <div>
+    <div className='bg-[#000000]'>
       <section id="hero" className="scroll-mt-20">
         <Hero />
       </section>
       <section id="about" className="scroll-mt-20">
-        {/* <Slider /> */}
-        {/* <Slider2/> */}
-        <Slider3/>
+        <Slider />
+        {/* <Slider3/> */}
       </section>
       <section id="service" className="pt-7 scroll-mt-20">
         <Services />

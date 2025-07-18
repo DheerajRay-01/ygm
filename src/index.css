@@ -13,7 +13,7 @@
 html,
 body {
     width: 100%;
-    background-color: rgb(253, 253, 253);
+    background-color: "#000000";
     /* color: white; */
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -31,3 +31,13 @@ body {
     @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
 }
 
+:root {
+  /* GOLDEN + BLACK THEME */
+  --color-gold: #FFD700;
+  --color-dark-gold: #C5A017;
+  --color-golden-glow: #FFDF00;
+  --color-black: #000000;
+  --color-charcoal: #1A1A1A;
+  --color-off-white: #E0E0E0;
+  --color-shadow-gray: #2E2E2E;
+}
