@@ -1,68 +1,66 @@
-import { useGSAP } from '@gsap/react'
-import gsap from 'gsap'
-import { ScrollTrigger, SplitText } from 'gsap/all'
-import React, { useRef } from 'react'
-import { strengths } from '../../data/StrengthsData'
-import LisenceCard from '../LisenceCard'
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger, SplitText } from 'gsap/all';
+import React, { useRef } from 'react';
+import { strengths } from '../../data/StrengthsData';
+import LisenceCard from '../LisenceCard';
 
-gsap.registerPlugin(ScrollTrigger)
-
+gsap.registerPlugin(ScrollTrigger);
 
 const Strengths = () => {
-  const gridRef = useRef()
+  const gridRef = useRef();
 
   useGSAP(() => {
+    // Title animation (split words)
+    const titleSplit = new SplitText(".strength-title", { type: "words" });
 
- const titleSplit = new SplitText(".strength-title", { type: "words" });
- 
-
-gsap.from(titleSplit.words, {
-  y: 50,
-  opacity: 0,
-  duration: 1.2,
-  ease: "power4.out",  // smoother easing
-  stagger: 0.15,  
-  scrollTrigger: {
-    trigger: ".strength-section",
-    start: "top 70%",  // start a bit earlier
-    end: "top 50%",    
-    scrub: true,
-    // markers: true
-  }
-});
-
-    gsap.from(gridRef.current.children, {
-      y: 100,
+    gsap.from(titleSplit.words, {
+      y: 40,
       opacity: 0,
-      stagger: 0.2,
-      duration: .8,
-      ease: "none",
+      duration: 1.4,
+      ease: "power3.out",
+      stagger: 0.1,
       scrollTrigger: {
         trigger: ".strength-section",
-        start: "top 60%",
-        scrub:true,
+        start: "top 75%",
+        end: "top 50%",
+        scrub: true,
+      },
+    });
+
+    // Cards animation
+    gsap.from(gridRef.current.children, {
+      y: 80,
+      opacity: 0,
+      scale: 0.95,
+      stagger: 0.15,
+      duration: 1,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: gridRef.current,
+        start: "top 70%",
         end: "top 30%",
-        toggleActions: "play none none reverse",
-      }
-    })
-  }, [])
+        scrub: true,
+      },
+    });
+  }, []);
 
   return (
-    <div className="strength-section px-4 bg-gradient-to-br  min-h-screen flex flex-col items-center">
-      <h1 className="strength-title text-4xl md:text-5lx  font-extrabold text-center text-gray-900 mb-10">
-        Trusted by Standards 
+    <div className="strength-section px-4 py-12 bg-gradient-to-br from-amber-50 via-white to-amber-100 min-h-screen flex flex-col items-center">
+      <h1 className="strength-title text-4xl md:text-5xl font-extrabold text-center text-gray-800 mb-12 drop-shadow-sm">
+        Trusted by Standards
       </h1>
 
       <div
         ref={gridRef}
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl w-full"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl w-full"
       >
         {strengths.map((item, index) => (
-         <LisenceCard item={item} key={index}/>
+          <LisenceCard item={item} key={index} />
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Strengths
+export default Strengths;
