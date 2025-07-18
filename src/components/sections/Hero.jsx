@@ -94,7 +94,7 @@ tl2.from(titleRef.current, {
     <div className=" absolute inset-0 bg-[#000000]/60 backdrop-blur-[1px]"></div> {/* color updated */}
 
     {/* Hero Content */}
-    <div className=" relative pt-10 md:p-20 flex flex-col justify-center items-center gap-2 md:gap-3 text-center">
+    <div className=" h-[90%]  p-5 relative pt-10 md:p-20 flex flex-col justify-center items-center gap-2 md:gap-3 text-center">
       {/* Logo / Company Name */}
       <div
         ref={titleRef}
