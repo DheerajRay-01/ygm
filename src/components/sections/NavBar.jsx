@@ -1,13 +1,15 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import { navItems } from '../../constants'
 import { useGSAP } from '@gsap/react'
 import { RiMenu2Fill } from "react-icons/ri";
 import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const NavBar = () => {
   const desktopNavRef = useRef([])
-  // const mobileNavRef = useRef([])
-  // const [showSideNav, setShowSideNav] = useState(false)
+  const [activeSection, setActiveSection] = useState("about") // default to first section
 
   useGSAP(() => {
     // Animate desktop nav items
@@ -30,18 +32,20 @@ const NavBar = () => {
     })
   }, [])
 
-  // const toggleSideNav = () => {
-  //   setShowSideNav(!showSideNav)
-  //   if (showSideNav) {
-  //     gsap.from(mobileNavRef.current, {
-  //       x: 100,
-  //       opacity: 0,
-  //       stagger: 0.2,
-  //       duration: 0.5,
-  //       ease: "back.out"
-  //     })
-  //   }
-  // }
+  useEffect(() => {
+    // Setup ScrollTrigger for active link
+    navItems.forEach((item) => {
+      ScrollTrigger.create({
+        trigger: `#${item.id}`,
+        start: "top center",
+        end: "bottom center",
+        onEnter: () => setActiveSection(item.id),
+        onEnterBack: () => setActiveSection(item.id),
+      })
+    })
+
+    return () => ScrollTrigger.getAll().forEach(trigger => trigger.kill())
+  }, [])
 
   return (
 <nav className="flex justify-between items-center px-6 py-2 
@@ -62,15 +66,17 @@ const NavBar = () => {
       <li
         key={item.id}
         ref={(el) => (desktopNavRef.current[idx] = el)}
-        className="cursor-pointer hover:text-green-400 transition-colors duration-300"
+        className={`cursor-pointer transition-colors duration-300 ${
+          activeSection === item.id ? "text-green-400" : "hover:text-green-400"
+        }`}
       >
-        {item.name}
+        <a href={`#${item.id}`}>
+          {item.name}
+        </a>
       </li>
     ))}
   </ul>
 </nav>
-
-
   )
 }
 

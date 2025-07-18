@@ -20,28 +20,30 @@ const Footer = () => {
         </div>
 
         {/* Links Section */}
-        <div className="w-full md:w-2/3 grid grid-cols-2 md:grid-cols-3 gap-4 text-center md:text-left">
-          {["Home", "About Us", "Services", "Clients", "Contact", "Privacy Policy"].map((link, idx) => (
+        <nav className="w-full md:w-2/3 grid grid-cols-2 md:grid-cols-3 gap-4 text-center md:text-left">
+          {["Home", "About", "Services", "Clients", "Contact", "Privacy Policy"].map((link, idx) => (
             <a 
               key={idx}
-              href={`#${link.toLowerCase().replace(/\s+/g, '-')}`}
-              className="hover:text-yellow-400 transition-all duration-300 ease-in-out hover:underline"
+              href={`#${link.toLowerCase().replace(/\s+/g, '-')}`} 
+              className="relative group text-gray-300 hover:text-yellow-400 transition-colors duration-300 ease-in-out"
             >
               {link}
             </a>
           ))}
-        </div>
+        </nav>
       </div>
 
       {/* Social Media */}
-      <div className="relative mt-10 flex justify-center gap-6 text-xl">
+      <div className="relative mt-10 flex justify-center gap-6 text-2xl">
         {[FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn].map((Icon, idx) => (
           <a
             key={idx}
             href="#"
-            className="hover:text-yellow-400 transition-all duration-300 ease-in-out transform hover:scale-110"
+            aria-label={`YGM on ${Icon.displayName?.replace('Fa', '')}`}
+            className="group relative text-gray-400 hover:text-yellow-400 transition-colors duration-300 ease-in-out"
           >
-            <Icon />
+            <Icon className="transition-transform duration-300 group-hover:scale-110" />
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
           </a>
         ))}
       </div>

@@ -12,6 +12,10 @@ export const navItems = [
         id:"clients"
     },
     {
+        name:"Our Strength",
+        id:"strength"
+    },
+    {
         name:"Contact Us",
         id:"contact"
     },
