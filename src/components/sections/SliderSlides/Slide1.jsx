@@ -14,31 +14,39 @@ const Slide1 = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: slideRef.current,
-        start: "top 50%", // Animate earlier
-        end: "top 20%",
-        scrub: true,
-        // markers: true, // Uncomment for testing
-      },
+        start: "top 80%", // Trigger when slide enters viewport
+        end: "top 40%", 
+        toggleActions: "play none none reverse",
+        // markers: true, // Enable for debugging
+      }
     })
 
-    // Animate text
+    // Fade & scale up whole slide
+    tl.from(slideRef.current, {
+      opacity: 0,
+      scale: 0.95,
+      duration: 1,
+      ease: "power2.out",
+    })
+
+    // Text animation
     tl.from(textRef.current.querySelectorAll('*'), {
-      x: 100,
+      y: 50,
+      opacity: 0,
+      stagger: 0.2,
+      duration: 0.8,
+      ease: "power3.out",
+    }, "-=0.5") // overlap slightly
+
+    // Image animation
+    tl.from(imgRef.current, {
+      scale: 0.8,
       opacity: 0,
       duration: 1,
       ease: "power3.out",
-      stagger: 0.3,
-    })
+    }, "-=0.8") // overlap more for sync
 
-    // Animate image
-    tl.from(imgRef.current, {
-      scale: 0.95,
-      opacity: 0,
-      duration: 1.2,
-      ease: "power3.out",
-    }, "<") // Start with text
-
-    return () => tl.kill() // 🧹 cleanup
+    return () => tl.kill()
   }, [])
 
   return (
@@ -51,7 +59,6 @@ const Slide1 = () => {
         muted
         playsInline
       >
-        {/* <source src="/video1.mp4" type="video/mp4" /> */}
         <source src="/video1.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -67,9 +74,9 @@ const Slide1 = () => {
             ref={imgRef}
             src="https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg"
             alt="Who We Are"
-            className="w-full rounded-3xl shadow-2xl border-4  border-amber-400"
+            className="w-full rounded-3xl shadow-2xl border-4 border-amber-400"
           />
-        </div>  
+        </div>
 
         {/* Text Section */}
         <div ref={textRef} className="flex-1 text-center lg:text-left text-white space-y-6">
@@ -87,7 +94,7 @@ const Slide1 = () => {
 
           <a
             href="#about"
-            className="inline-block px-8 py-4 text-lg font-semibold bg-amber-500 rounded-full shadow hover:shadow-xl hover:bg-amber-600 hover:scale-105 "
+            className="inline-block px-8 py-4 text-lg font-semibold bg-amber-500 rounded-full shadow hover:shadow-xl hover:bg-amber-600 hover:scale-105"
           >
             Learn More About Us
           </a>

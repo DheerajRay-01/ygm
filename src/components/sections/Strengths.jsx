@@ -46,8 +46,8 @@ const Strengths = () => {
   }, []);
 
   return (
-    <div className="strength-section px-4 py-12 bg-gradient-to-br from-amber-50 via-white to-amber-100 min-h-screen flex flex-col items-center">
-      <h1 className="strength-title text-4xl md:text-5xl font-extrabold text-center text-gray-800 mb-12 drop-shadow-sm">
+    <div className="strength-section px-4  py-12 min-h-screen flex flex-col items-center">
+      <h1 className="strength-title text-4xl md:text-5xl font-extrabold text-center text-gray-800  drop-shadow-sm">
         Trusted by Standards
       </h1>
 

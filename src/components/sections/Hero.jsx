@@ -75,10 +75,10 @@ tl2.from(titleRef.current, {
     }}
   >
     {/* Overlay */}
-    <div className="absolute inset-0 bg-black/50 backdrop-blur-[1px] z-0"></div>
+    <div className="absolute inset-0 bg-black/50 backdrop-blur-[1px] "></div>
 
     {/* Hero Content */}
-    <div className="relative z-10 flex flex-col justify-center items-center gap-8 text-center">
+    <div className="relative flex flex-col justify-center items-center gap-8 text-center">
       {/* Logo / Company Name */}
       <div
         ref={titleRef}

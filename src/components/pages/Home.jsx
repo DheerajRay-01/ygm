@@ -5,6 +5,8 @@ import Slider from '../sections/Slider'
 import Clients from '../sections/Clients'
 import Contact from '../sections/Contact'
 import Services from '../sections/Services'
+import Slider2 from '../sections/Slider2'
+import Slider3 from '../sections/Slider3'
 
 const Home = () => {
   return (
@@ -13,7 +15,9 @@ const Home = () => {
         <Hero />
       </section>
       <section id="about" className="scroll-mt-20">
-        <Slider />
+        {/* <Slider /> */}
+        {/* <Slider2/> */}
+        <Slider3/>
       </section>
       <section id="service" className="pt-7 scroll-mt-20">
         <Services />
