@@ -16,7 +16,7 @@ const ServiceCard = ({ data }) => {
     // Animate height and paragraph together
     tl.current
       .to(div, {
-        height: "80%",
+        height: "85%",
         duration: 0.4,
       })
       .fromTo(
@@ -56,7 +56,7 @@ const ServiceCard = ({ data }) => {
   
   <div
     ref={descriptionRef}
-    className="mt-1 text-sm md:text-base text-gray-50 leading-relaxed font-medium px-2 py-1 rounded backdrop-blur-md bg-black/30 drop-shadow-md"
+    className="mt-1 text-sm md:text-base text-gray-50 leading-relaxed font-medium  py-1 rounded backdrop-blur-md bg-black/30 drop-shadow-md"
   >
     {data.description}
   </div>
