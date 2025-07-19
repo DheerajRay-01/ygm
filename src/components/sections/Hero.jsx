@@ -2,6 +2,7 @@
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import React, { useRef } from 'react';
+import { heroScrollData } from '../../data/herosectionScrollData';
 
 const Hero = () => {
     const scrollRef = useRef();
@@ -66,22 +67,6 @@ tl2.from(titleRef.current, {
 
   }, []);
 
-
-  const scrollOptions = [
-              "700+ Skilled Professionals",
-              "ISO 9001 Certification",
-              "Reliable Human Capital",
-              "Workforce Excellence",
-              "Nationwide Presence",
-            ]
-              .concat([
-                "700+ Skilled Professionals",
-                "ISO 9001 Certification",
-                "Reliable Human Capital",
-                "Workforce Excellence",
-                "Nationwide Presence",
-              ])
-
   return (
 <div id='hero' className="w-screen h-screen bg-gradient-to-r from-[#000000] to-[#1A1A1A]">
   <div
@@ -132,7 +117,7 @@ tl2.from(titleRef.current, {
             className="absolute top-0 space-y-2 flex flex-col"
           >
             {
-              scrollOptions.map((item, ind) => (
+              heroScrollData.map((item, ind) => (
                 <p
                   key={ind}
                   className="text-[#FFD700] font-bold text-base lg:text-xl px-2 py-1 tracking-wide"> {/* color updated */}

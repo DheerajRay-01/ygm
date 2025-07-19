@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router'
 import Layout from './components/pages/Layout'
 import Home from './components/pages/Home'
 import Loader from './components/pages/Loader'
+import ServiceDescriptionPage from './components/pages/serviceDescriptionPage'
 
 const App = () => {
   const [loading, setLoading] = useState(true)
@@ -21,8 +22,10 @@ const App = () => {
         <Routes>
           <Route element={<Layout />}>
             <Route index element={<Home />} />
+            <Route path='service/:serviceId' element={<ServiceDescriptionPage/> } />
           </Route>
         </Routes>
+        
       )}
     </>
   )

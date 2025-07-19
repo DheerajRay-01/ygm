@@ -41,6 +41,12 @@ const Slide3 = () => {
         </div>
       ))}
     </div>
+          <div
+        className="flex flex-col lg:flex-row items-center justify-center gap-2 bg-[#1A1A1A]/70 rounded-xl backdrop-blur-md shadow-lg px-4 py-2">
+           <h3 className="text-base lg:text-xl font-semibold text-[#FFD700] tracking-wide"> {/* color updated */}
+          We have not Blacklisted since 21 Years.
+        </h3>
+        </div>
 
     {/* Description */}
     <p className="text-lg lg:text-2xl text-[#C0C0C0] max-w-3xl drop-shadow"> {/* color updated */}

@@ -38,7 +38,7 @@ const Services = () => {
       scale: 0.95,          // slight zoom in
       duration: 1,
       ease: "power3.out",
-      stagger: 0.2,         // stagger for wave effect
+      // stagger: 0.2,         // stagger for wave effect
       scrollTrigger: {
         trigger: ".service-container",
         start: "top 80%",

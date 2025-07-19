@@ -1,10 +1,12 @@
 import gsap from "gsap";
 import React, { useRef, useEffect } from "react";
+import { useNavigate } from "react-router";
 
 const ServiceCard = ({ data }) => {
   const descriptionRef = useRef();
   const containerRef = useRef();
   const tl = useRef();
+  const navigate = useNavigate()
 
   useEffect(() => {
     const div = containerRef.current.querySelector("#description");
@@ -34,6 +36,14 @@ const ServiceCard = ({ data }) => {
   const handleMouseLeave = () => {
     tl.current.reverse();
   };
+
+
+
+  const handleGotoService = ()=>{
+    const serviceId = data.id
+    console.log(serviceId);
+    navigate(`service/${serviceId}`)
+  }
 
   return (
 <div
@@ -68,6 +78,8 @@ const ServiceCard = ({ data }) => {
 
     <button
       className="mt-2 px-4 py-2 text-sm font-semibold text-[#000000] bg-gradient-to-r from-[#FFD700] to-[#C5A017] rounded-lg shadow hover:from-[#C5A017] hover:to-[#FFD700] transition-colors duration-300"
+    onClick={handleGotoService}
+    
     >
       View Service
     </button>

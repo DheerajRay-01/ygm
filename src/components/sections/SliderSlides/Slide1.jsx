@@ -92,6 +92,8 @@ const Slide1 = () => {
         teams that drive success.
       </p>
 
+
+
       <a
         href="#about"
         className="inline-block px-8 py-4 text-lg font-semibold bg-[#FFD700] rounded-full shadow hover:shadow-xl hover:bg-[#C5A017] hover:scale-105 "> {/* button bg color updated */}
