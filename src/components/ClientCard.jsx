@@ -1,12 +1,12 @@
 import React from 'react'
 
-const ClientCard = ({ item, handleMouseEnter, handleMouseLeave, index }) => {
+const ClientCard = ({ item, index }) => {
   return (
     <div
       key={`${item.id}-${index}`}
       className="client-card shrink-0 w-[300px] md:w-[350px] rounded-xl shadow-lg bg-[#1A1A1A] hover:shadow-2xl transition-shadow duration-300 overflow-hidden" // card bg updated
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      // onMouseEnter={handleMouseEnter}
+      // onMouseLeave={handleMouseLeave}
     >
       {/* Logo */}
       <div className="bg-[#FFD700]/10 flex justify-center bg-cover bg-center items-center h-[120px]"

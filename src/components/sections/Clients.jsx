@@ -4,75 +4,78 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { SplitText } from 'gsap/all'
 import ClientCard from '../ClientCard'
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa"
 
 const Clients = () => {
-  let scrollTween; // Keep reference to the tween
+  const scrollingData = [...clientsData, ...clientsData]
+  let scrollTween
 
   useGSAP(() => {
-    // Start the infinite scroll animation
+    // Infinite scroll left
     scrollTween = gsap.to(".client-scroller", {
-      xPercent: -50, // Move by 50% of width (2x list)
+      xPercent: -50,
       ease: "none",
       duration: 20,
       repeat: -1,
-    });
+    })
 
-    const titleSplit = new SplitText(".client-title", { type: "words" });
-
+    // Animate heading
+    const titleSplit = new SplitText(".client-title", { type: "words" })
     gsap.from(titleSplit.words, {
       y: 50,
       opacity: 0,
       duration: 1.2,
-      ease: "power4.out", // smoother easing
+      ease: "power4.out",
       stagger: 0.15,
       scrollTrigger: {
         trigger: ".client-container",
-        start: "top 70%", // start a bit earlier
+        start: "top 70%",
         end: "top 50%",
         scrub: true,
-        // markers: true
-      }
-    });
-  }, []);
+      },
+    })
+  }, [])
 
-  // Duplicate clientData for seamless loop
-  const scrollingData = [...clientsData, ...clientsData];
-
-  // Pause on hover
   const handleMouseEnter = () => {
-    // if (scrollTween) scrollTween.pause();
-    gsap.to(".client-scroller", {
-      xPercent: 0,
-      ease: "none",
-      duration: 100,
-    });
-  };
-
+    scrollTween.pause()
+  }
   const handleMouseLeave = () => {
-    gsap.to(".client-scroller", {
-      xPercent: -50,
-      ease: "none",
-      duration: 15,
-      repeat: -1,
-    });
-  };
+    scrollTween.resume()
+  }
+
+  const handleMouseEnterRight = () => {
+    scrollTween.timeScale(-1) // Reverse
+  }
+  const handleMouseLeaveRight = () => {
+    scrollTween.timeScale(1) // Forward
+  }
 
   return (
-    <div className="client-container w-screen py-10    overflow-hidden"> {/* bg updated */}
-      <h1 className="client-title text-4xl md:text-5xl font-extrabold text-center text-[#FFD700] mb-10"> {/* title color updated */}
+    <div className="client-container w-screen py-10 overflow-hidden">
+      {/* Heading */}
+      <h1 className="client-title text-4xl md:text-5xl font-extrabold text-center text-[#FFD700] mb-10">
         Our Trusted Clients
       </h1>
 
+      {/* Carousel */}
       <div className="relative">
-        <div className="client-scroller flex gap-6 px-6 w-max">
+        {/* Right hover zone */}
+        <div
+          className="absolute bg-black/50 backdrop-blur-[2px] h-full w-[60px] right-0 flex justify-center items-center z-50 top-0 cursor-pointer"
+          onMouseEnter={handleMouseEnterRight}
+          onMouseLeave={handleMouseLeaveRight}
+        >
+          <FaChevronRight size={20} />
+        </div>
+
+        {/* Client logos */}
+        <div
+          className="client-scroller flex gap-6 px-6 w-max"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
           {scrollingData.map((item, index) => (
-            <ClientCard
-              item={item}
-              key={index}
-              handleMouseEnter={handleMouseEnter}
-              handleMouseLeave={handleMouseLeave}
-              index={index}
-            />
+            <ClientCard item={item} key={index} index={index} />
           ))}
         </div>
       </div>
