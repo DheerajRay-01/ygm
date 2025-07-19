@@ -3,7 +3,8 @@ import { Routes, Route } from 'react-router'
 import Layout from './components/pages/Layout'
 import Home from './components/pages/Home'
 import Loader from './components/pages/Loader'
-import ServiceDescriptionPage from './components/pages/serviceDescriptionPage'
+// import ServiceDescriptionPage from './components/pages/ServiceDescription.jsx'
+import ViewService from './components/pages/ViewService.jsx'
 
 const App = () => {
   const [loading, setLoading] = useState(true)
@@ -22,7 +23,7 @@ const App = () => {
         <Routes>
           <Route element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path='service/:serviceId' element={<ServiceDescriptionPage/> } />
+            <Route path='service/:serviceId' element={<ViewService/> } />
           </Route>
         </Routes>
         
