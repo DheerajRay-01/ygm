@@ -25,6 +25,7 @@ const App = () => {
             <Route index element={<Home />} />
             <Route path='service/:serviceId' element={<ViewService/> } />
           </Route>
+            <Route path='*' element={<Home/> } />
         </Routes>
         
       )}

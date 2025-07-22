@@ -1,50 +1,62 @@
 export const strengths = [
   {
-    img: "https://www.qassurance.com/wp-content/uploads/QAssurance-logos-4.png",
+    img: "/iso_logo.png",
     title: "ISO 9001:2015 Certified",
-    description: "Ensures quality standards across all operations.",
-    badge: "Verified"
+    description: "Quality Management System ensuring standards across operations.",
+    badge: "Certified"
   },
   {
-    img: "https://www.iete.org/wp-content/uploads/2023/09/GOI.png",
-    title: "Government Recognized",
-    description: "Approved manpower provider by several government agencies.",
+    img: "/iso_logo.png",
+    title: "ISO 14001:2015 Certified",
+    description: "Environmental Management System for sustainable practices.",
+    badge: "Certified"
+  },
+  {
+    img: "/iso_logo.png",
+    title: "ISO 45001:2018 Certified",
+    description: "Occupational Health & Safety Management System.",
+    badge: "Certified"
+  },
+  {
+    img: "/iso_logo.png",
+    title: "ISO 29993:2017 Certified",
+    description: "Providing manpower outsourcing and various facility services.",
+    badge: "Certified"
+  },
+  {
+    img: "/iso_logo.png",
+    title: "ISO/IEC 27001:2022 Certified",
+    description: "Information Security Management System for manpower services.",
+    badge: "Certified"
+  },
+  {
+    img: "/iso_logo.png",
+    title: "SA 8000:2014 Certified",
+    description: "Social Accountability System for ethical workforce practices.",
+    badge: "Certified"
+  },
+  {
+    img: "/MSME_logo.png",
+    title: "MSME Certified",
+    description: "Recognized as a Micro, Small and Medium Enterprise.",
     badge: "Approved"
   },
   {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoevS-sWfFpM95yNy-cFy5_oZMw_UfBcLMGA&s",
-    title: "Licensed Contractor",
-    description: "Official license for manpower services in multiple states.",
-    badge: "Trusted"
-  },
-  {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoevS-sWfFpM95yNy-cFy5_oZMw_UfBcLMGA&s",
-    title: "Excellence Award 2024",
-    description: "Awarded for exceptional service and quality workforce.",
+    img: "/kayakalp_logo.png",
+    title: "Kayakalp Award 2018",
+    description: "Recognized for excellence in workplace hygiene and quality.",
     badge: "Awarded"
   },
   {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoevS-sWfFpM95yNy-cFy5_oZMw_UfBcLMGA&s",
-    title: "Excellence Award 2024",
-    description: "Awarded for exceptional service and quality workforce.",
+    img: "/kayakalp_logo.png",
+    title: "Muskaan Karyakaram Award 2022-23",
+    description: "Awarded for Quality Assurance work and Muskaan Karyakaram.",
     badge: "Awarded"
   },
-    {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoevS-sWfFpM95yNy-cFy5_oZMw_UfBcLMGA&s",
-    title: "Licensed Contractor",
-    description: "Official license for manpower services in multiple states.",
-    badge: "Trusted"
-  },
-    {
-    img: "https://www.iete.org/wp-content/uploads/2023/09/GOI.png",
-    title: "Government Recognized",
-    description: "Approved manpower provider by several government agencies.",
-    badge: "Approved"
-  },
-    {
-    img: "https://www.qassurance.com/wp-content/uploads/QAssurance-logos-4.png",
-    title: "ISO 9001:2015 Certified",
-    description: "Ensures quality standards across all operations.",
+  {
+    img: "/kayakalp_logo.png",
+    title: "Work Performance Certificates",
+    description: "Acknowledged for excellent manpower service performance.",
     badge: "Verified"
-  },
-]
+  }
+];
