@@ -53,7 +53,7 @@ const Slide1 = () => {
 <div ref={slideRef} className="slide shrink-0 h-screen w-screen relative">
   {/* Background Video */}
   <video
-    className="absolute inset-0 w-full h-full object-cover"
+    className="absolute inset-0 w-full h-full  object-cover"
     autoPlay
     loop
     muted
@@ -64,44 +64,41 @@ const Slide1 = () => {
   </video>
 
   {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]"></div> {/* color updated */}
+  <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]"></div>
 
   {/* Content */}
   <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8 p-8 lg:p-24 mt-20 md:m-3 h-full">
-    
     {/* Media Section */}
     <div className="flex-0 md:flex-1 max-w-lg lg:max-w-xl">
       <img
         ref={imgRef}
         src="https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg"
         alt="Who We Are"
-        className="w-full rounded-3xl shadow-2xl border-4 border-[#FFD700]" /> {/* border color updated */}
+        className="w-full rounded-3xl shadow-2xl border-4 border-[#FFD700]"
+      />
     </div>
 
     {/* Text Section */}
-    <div ref={textRef} className="flex-1 text-center lg:text-left text-[#E0E0E0] space-y-6"> {/* text color updated */}
+    <div ref={textRef} className="flex-1 text-center lg:text-left text-[#E0E0E0] space-y-6">
       <h2 className="text-4xl lg:text-7xl font-extrabold tracking-tight leading-tight drop-shadow-lg">
         Who We Are
-        <span className="block w-[80%] h-1 bg-[#FFD700] mt-3 mx-auto lg:mx-0 rounded-full"></span> {/* divider color updated */}
+        <span className="block w-[80%] h-1 bg-[#FFD700] mt-3 mx-auto lg:mx-0 rounded-full"></span>
       </h2>
 
-      <p className="text-lg lg:text-xl text-[#C0C0C0] leading-relaxed drop-shadow-md"> {/* paragraph color updated */}
-        At <span className="font-semibold text-[#FFD700]">YGM</span>, {/* highlight color updated */}
-        we deliver certified, skilled, and trusted manpower solutions that
-        help businesses grow stronger. Our mission? Building reliable
-        teams that drive success.
+      <p className="text-lg font-bold lg:text-xl text-[#C0C0C0] leading-relaxed drop-shadow-md">
+        <span className="font-bold text-[#FFD700]">Yash Govind Marketing</span> (YGM) is a trusted outsourcing partner delivering <span className="text-[#FFD700]">21+ years of excellence</span> in Housekeeping, Security, and Manpower Supply. We empower businesses with certified, skilled, and reliable teams tailored to their needs.
       </p>
-
-
 
       <a
         href="#about"
-        className="inline-block px-8 py-4 text-lg font-semibold bg-[#FFD700] rounded-full shadow hover:shadow-xl hover:bg-[#C5A017] hover:scale-105 "> {/* button bg color updated */}
+        className="inline-block px-8 py-4 text-lg font-semibold bg-[#FFD700] rounded-full shadow hover:shadow-xl hover:bg-[#C5A017] hover:scale-105"
+      >
         Learn More About Us
       </a>
     </div>
   </div>
 </div>
+
 
 
   )

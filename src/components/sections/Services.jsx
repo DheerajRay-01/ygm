@@ -31,21 +31,21 @@ const Services = () => {
     });
 
     // Animate Service Cards
-    const cards = serviceCardsRef.current.querySelectorAll(".service-card");
-    gsap.from(cards, {
-      y: 30,                // subtle upward movement
-      opacity: 0,
-      scale: 0.95,          // slight zoom in
-      duration: 1,
-      ease: "power3.out",
-      // stagger: 0.2,         // stagger for wave effect
-      scrollTrigger: {
-        trigger: ".service-container",
-        start: "top 80%",
-        end: "top 50%",
-        toggleActions: "play none none none",
-      },
-    });
+    // const cards = serviceCardsRef.current.querySelectorAll(".service-card");
+    // gsap.from(cards, {
+    //   y: 30,                // subtle upward movement
+    //   opacity: 0,
+    //   scale: 0.95,          // slight zoom in
+    //   duration: 1,
+    //   ease: "power3.out",
+    //   // stagger: 0.2,         // stagger for wave effect
+    //   scrollTrigger: {
+    //     trigger: ".service-container",
+    //     start: "top 80%",
+    //     end: "top 50%",
+    //     toggleActions: "play none none none",
+    //   },
+    // });
   }, []);
 
   return (

@@ -7,6 +7,7 @@ import Contact from '../sections/Contact'
 import Services from '../sections/Services'
 import Slider2 from '../sections/Slider2'
 import Slider3 from '../sections/Slider3'
+import OurServices from '../sections/OurServices'
 
 const Home = () => {
   return (
@@ -14,9 +15,14 @@ const Home = () => {
       <section id="hero" className="scroll-mt-20">
         <Hero />
       </section>
-      <section id="about" className="scroll-mt-20">
-        {/* <Slider /> */}
+        {/* <section id="slider" className="scroll-mt-20">
+        <Slider />
+      </section> */}
+      <section id="about" className="pt-7 scroll-mt-20">
         <Slider3/>
+      </section>
+      <section id="our-services" className="pt-7 scroll-mt-20">
+        <OurServices/>
       </section>
       <section id="service" className="pt-7 scroll-mt-20">
         <Services />

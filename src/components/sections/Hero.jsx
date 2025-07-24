@@ -79,13 +79,13 @@ tl2.from(titleRef.current, {
     <div className=" absolute inset-0 bg-[#000000]/60 backdrop-blur-[1px]"></div> {/* color updated */}
 
     {/* Hero Content */}
-    <div className=" h-[90%]  p-5 relative pt-10 md:p-20 flex flex-col justify-center items-center gap-2 md:gap-3 text-center">
+    <div className=" h-[90%]  p-5 relative pt-10 md:p-20 flex flex-col justify-center items-center  md:gap-3 text-center">
       {/* Logo / Company Name */}
       <div
         ref={titleRef}
         className="flex flex-col justify-center items-center  mt-20"
       >
-        <img src="/logo.png" alt="Logo" className="w-25 md:w-50 " />
+        <img src="/logo.png" alt="Logo" className="w-25 md:w-40 " />
         <p className="text-3xl md:text-4xl font-extrabold text-[#FFD700] tracking-wide"> {/* color updated */}
           Yash Govind Marketing Pvt. Ltd.
         </p>

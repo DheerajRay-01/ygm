@@ -28,7 +28,7 @@ const Slider3 = () => {
   }, []);
 
   return (
-    <div className="w-full about-container">
+    <div className="w-full  about-container  ">
       {/* Section Heading */}
       <div className="text-center py-10">
         <h2 className="about-title text-4xl md:text-5xl font-extrabold text-[#FFD700] drop-shadow-sm">
@@ -37,10 +37,10 @@ const Slider3 = () => {
       </div>
 
       {/* Carousel */}
-      <div className="carousel w-full">
+      <div className="carousel w-full h-full">
         {/** SLIDE 1 */}
-        <div id="slide1" className="carousel-item relative w-full transition-opacity duration-700 ease-in-out">
-          <Slide1 />
+        <div id="slide1" className="carousel-item overflow-hidden relative w-full transition-opacity duration-700 ease-in-out">
+          <Slide1 />  
           <div className="absolute inset-y-1/2 left-5 right-5 flex justify-between items-center transform -translate-y-1/2 z-50">
             <a
               href="#slide3"
@@ -58,7 +58,7 @@ const Slider3 = () => {
         </div>
 
         {/** SLIDE 2 */}
-        <div id="slide2" className="carousel-item relative w-full transition-opacity duration-700 ease-in-out">
+        <div id="slide2" className="carousel-item relative overflow-hidden w-full transition-opacity duration-700 ease-in-out">
           <Slide2 />
           <div className="absolute inset-y-1/2 left-5 right-5 flex justify-between items-center transform -translate-y-1/2 z-50">
             <a
@@ -77,7 +77,7 @@ const Slider3 = () => {
         </div>
 
         {/** SLIDE 3 */}
-        <div id="slide3" className="carousel-item relative w-full transition-opacity duration-700 ease-in-out">
+        <div id="slide3" className="carousel-item  overflow-hidden w-full transition-opacity duration-700 ease-in-out">
           <Slide3 />
           <div className="absolute inset-y-1/2 left-5 right-5 flex justify-between items-center transform -translate-y-1/2 z-50">
             <a

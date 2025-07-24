@@ -32,38 +32,35 @@ function Slide2() {
   }, []);
 
   return (
- <div className="slide shrink-0 h-screen w-screen relative">
+<div className="slide shrink-0 h-screen w-screen relative overflow-hidden">
   {/* Background Image */}
   <img
     src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=80"
     alt="Our Vision"
-    className="absolute inset-0 w-full h-full object-cover"
+    className="absolute inset-0  w-full h-screen  object-cover"
   />
 
   {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]"></div> {/* color updated */}
+  <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]"></div>
 
   {/* Content */}
   <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8 p-8 lg:p-24 mt-10">
-    
     {/* Text Section */}
-    <div
-      ref={textRef}
-      className="flex-0 md:flex-1 text-center lg:text-left text-[#E0E0E0] space-y-6"> {/* color updated */}
+    <div ref={textRef} className="flex-0 md:flex-1 text-center lg:text-left text-[#E0E0E0] space-y-6">
       <h2 className="text-5xl lg:text-7xl font-extrabold tracking-tight leading-tight drop-shadow-lg">
         Our Vision
-        <span className="block w-[100px] h-1 bg-[#FFD700] mt-3 mx-auto lg:mx-0 rounded-full"></span> {/* color updated */}
+        <span className="block w-[100px] h-1 bg-[#FFD700] mt-3 mx-auto lg:mx-0 rounded-full"></span>
       </h2>
 
-      <p className="text-lg lg:text-xl text-[#C0C0C0] leading-relaxed drop-shadow-md"> {/* color updated */}
-        We believe in creating a workforce ecosystem where businesses thrive with the right talent and employees grow with purpose.
-        <span className="text-[#FFD700] font-semibold"> Our vision </span> drives every partnership we build. {/* color updated */}
+      <p className="text-lg lg:text-xl font-bold text-[#C0C0C0] leading-relaxed drop-shadow-md">
+        At <span className="font-semibold text-[#FFD700]">YGM</span>, we envision a future where businesses thrive through <span className="text-[#FFD700] font-semibold">seamless outsourcing solutions</span>, and individuals achieve growth through meaningful employment. Our goal is to build partnerships that deliver lasting impact.
       </p>
 
       <a
         href="#vision"
         ref={buttonRef}
-        className="inline-block px-8 py-4 text-lg font-semibold bg-gradient-to-r from-[#FFD700] to-[#C5A017] rounded-full shadow-lg hover:shadow-2xl hover:from-[#C5A017] hover:to-[#FFD700] transform hover:scale-105 "> {/* color updated */}
+        className="inline-block px-8 py-4 text-lg font-semibold bg-gradient-to-r from-[#FFD700] to-[#C5A017] rounded-full shadow-lg hover:shadow-2xl hover:from-[#C5A017] hover:to-[#FFD700] transform hover:scale-105"
+      >
         Discover Our Vision
       </a>
     </div>
@@ -71,7 +68,7 @@ function Slide2() {
     {/* Video Section */}
     <div ref={videoRef} className="flex-1 max-w-lg lg:max-w-xl">
       <video
-        className="w-full rounded-3xl shadow-2xl border-4 border-[#FFD700]" /* color updated */
+        className="w-full rounded-3xl shadow-2xl border-4 border-[#FFD700]"
         autoPlay
         loop
         muted
@@ -83,6 +80,7 @@ function Slide2() {
     </div>
   </div>
 </div>
+
 
   );
 }
